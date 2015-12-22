@@ -1,0 +1,120 @@
+    <!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="UI Design.css">
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+
+        function feedload(feedurl,divid) {
+
+            var feedcontainer = document.getElementById("feeddiv")
+            var feedlimit = 15
+            var rssoutput = "<ul>"
+
+            function rssfeedsetup() {
+                var feedpointer = new google.feeds.Feed(feedurl) //Google Feed API method
+                feedpointer.setNumEntries(feedlimit) //Google Feed API method
+                feedpointer.load(displayfeed) //Google Feed API method
+
+            }
+
+            function displayfeed(result) {
+                if (!result.error) {
+                    var thefeeds = result.feed.entries
+
+                    for (var i = 0; i < thefeeds.length; i++)
+                        rssoutput += "<div id='innerfeed'><li><a href='" + thefeeds[i].link + "' style='text-decoration:none' target='_blank'><div id='zzzz'>" + thefeeds[i].title + "</div></a></li> </div>"
+
+                        rssoutput+="</ul>"
+                    document.getElementById(divid).innerHTML = rssoutput
+
+                }
+                else
+                    alert("Error fetching feeds!")
+            }
+            rssfeedsetup()
+        }
+</script>
+    </head>
+    <body>
+        <div id="navigator">
+                <ul class="list">
+                    <li class="list">
+                    <a href="#national">National</a>
+                    </li>
+                    <li>
+                    <a href="#politics">politics</a>
+                    </li>
+                    <li>
+                    <a href="#entertainment">entertainment</a>
+                    </li>
+                    <li>
+                    <a href="#tech">tech</a>
+                    </li>
+                    <li>
+                    <a href="#sports">sports</a>
+                    </li>
+                </ul>
+            </div>
+        <article id="main">
+        <div id="feedcontent">
+        <div id="title">
+            Entertainment
+        </div>
+            <div id="entertainment">
+            <script>
+                feedload("http://www.theverge.com/rss/index.xml","entertainment")
+            </script>
+            </div>   
+
+        </div>
+        <div id="feedcontent">
+            <div id="title">
+                Politics
+        </div>
+            <div id="politics">
+            <script>
+                feedload("http://www.hindu.com/rss/01hdline.xml","politics")
+            </script>
+                </div>  
+            </div>
+        <div id="feedcontent">
+            <div id="title">
+                Sports  
+            </div>
+            <div id="sports">
+            <script>
+                feedload("http://www.espncricinfo.com/rss/content/story/feeds/6.xml","sports")
+            </script> 
+                </div> 
+            </div>
+            <div id="feedcontent">
+            <div id="title">
+                Tech  
+            </div>            
+             <div id="tech">
+            <script>
+                feedload("http://www.theverge.com/rss/index.xml","tech")
+            </script> 
+                </div>
+                </div>      
+            <div id="feedcontent">
+            <div id="title">
+                National  
+            </div>            
+             <div id="national">
+            <script>
+                feedload("http://www.hindu.com/rss/02hdline.xml","national")
+            </script> 
+                </div>
+                </div>        
+        </article>
+           
+
+    </body>
+</html>

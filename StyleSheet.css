@@ -1,0 +1,370 @@
+body{
+    background-color: #F0EEE9;
+}
+#navigation{
+    background-color:#757575 ;    
+    width: 100%; 
+    top: 0px;
+    box-shadow:4px 1px 1px #808080;
+    position: fixed;
+    margin-left: -10px;
+    padding-right: 2px; 
+    
+    
+}
+#navigation a{
+    float: left;
+    margin-left: 30px;
+    padding-bottom:20px;
+    font-family: 'Helvetica Neue';
+    font-size: larger;
+    text-decoration: none;
+    color: white;
+    
+}
+
+#navigation ul{
+    list-style-type: none;
+    padding-left: 200px
+}
+#feedcontent{
+    height: auto;
+    margin: 1px;    
+}
+
+#title{
+    padding-top: 40px;
+    font-family:'Helvetica Neue light';
+    font-size: xx-large;
+    text-align: center;    
+    
+}
+
+#entertainment_content{
+    -webkit-transition-duration: 1s;
+}
+#topstories_sec{
+    margin-top:50px;
+    background-color: #fbfbfb;    
+    width:90%;
+    margin-left: 80px;
+}
+#topstories_sec #title{
+    padding-top: 40px;
+    margin-left:0px;
+}
+#topstories{
+    height:600px;    
+    width: 90%;
+    overflow-y: scroll;
+    padding-left: 50px;
+}
+#hindu{
+    width: 400px;
+    background-color:#808080;
+    height:1000px;
+    float: left
+}
+#sources{
+    padding-top: 30px;
+       
+}
+#top_hindu{
+    height: 30px;
+    background-color: #78909C;
+    color: #fff;
+    font-family: 'Helvetica Neue';
+    text-align: center;
+    padding-top:12px;
+    width: 220px;
+    margin-left: 90px;
+    box-shadow: 1px 1px 3px #808080;  
+    float: left
+    
+}
+#top_bbc{
+    height: 30px;
+    background-color: #78909C;
+    color: #fff;
+    font-family: 'Helvetica Neue';
+    text-align: center;
+    padding-top:12px;
+    width: 220px;
+    margin-left: 38px;
+    box-shadow: 1px 1px 3px #808080;  
+    float: left
+}
+#top_msn{
+    height: 30px;
+    background-color: #78909C;
+    color: #fff;
+    font-family: 'Helvetica Neue';
+    text-align: center;
+    padding-top:12px;
+    width: 220px;
+    margin-left: 39px;
+    box-shadow: 1px 1px 3px #808080;  
+    float: left
+}
+#topstories_hindu{
+    margin-top: 0px;
+    width: 33%;
+    float: left;
+    font-family: 'Museo 300';        
+}
+#topstories_msn{
+    width: 33%;
+    font-family: 'Museo 300';
+    float: left;
+    
+}
+#topstories_bbc{
+    width: 33%;
+    float: left;
+    font-family: 'Museo 300'
+}
+#topstories_content{
+    width: 33%;
+    float: multicol;
+    box-shadow: 4px 1px 1px #F0EEE9;
+}
+#entertainment_sec{
+    margin-top: 100px;
+    width:90%;
+    margin-left: 80px;
+    background-color: #fbfbfb;
+    font-family: 'Myriad Pro';
+    float: left
+}
+#entertainment_sec #title{
+      margin-top: 30px;    
+    border-bottom-style: solid;
+    border-bottom-color: #bbbbbb;
+    border-bottom-width: thin;
+}
+#bollywood{
+    margin-top: 30px;
+    width: 33%;
+    float: left
+}
+#bollywood_title{
+    padding-left: 170px;
+}
+#south{
+    margin-top: 30px;
+    width: 33%;
+    float: left ;
+      
+}
+#south_title{
+    padding-left: 190px;
+}
+#hollywood{
+    margin-top: 30px;
+    float: left;
+    width: 33%;
+}
+#hollywood_title{
+    padding-left: 170px;
+}
+#politics_sec{
+    margin-top: 100px;
+    width: 100%;
+    float: left;
+    margin-left: 80px;
+    width: 90%;
+    background-color: #fbfbfb;    
+    font-family: 'Myriad Pro'
+
+}
+#politics_sec #title{
+    margin-top: 30px;
+    margin-bottom: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #bbbbbb;
+    border-bottom-width: thin;        
+}
+#national{
+    width: 33%;
+    float: left;
+    margin-top: 30px;
+}
+#national_title{
+    padding-left: 180px;
+  
+}
+#regional{
+    float: left;
+    width:33%;
+     margin-top: 30px;
+}
+#regional_title{
+    padding-left: 150px;
+    
+}
+#international{
+    margin-top:30px;
+    float: left;
+    width: 33%;
+}
+#international_title{
+    padding-left: 150px;
+}
+#sports_sec{
+    margin-top:100px;
+    width: 100%;
+    float: left;
+    background-color: #fbfbfb;
+    width: 90% ;
+    margin-left: 80px;
+    margin-bottom: 100px;
+}
+#sports_sec #title{
+    padding-top: 30px;
+    margin-bottom: 30px;
+    border-bottom-style: solid;
+    border-bottom-color: #bbbbbb;
+    border-bottom-width: thin;
+    
+}
+#sports_content{
+    width:100%;
+}
+#sports_hindu{
+    margin-top: 10px;
+    width: 33%;
+    float: left;
+    font-family: 'Myriad Pro'
+}
+#hindu_title{
+    padding-left: 160px;
+    
+}
+#livescore {
+    width: 30%;
+    float: left;
+    background-color: white;
+    margin-left: 30px;
+    margin-top: 45px;
+    text-align: center;
+    font-family: 'Myriad Pro';
+    box-shadow: 1px 1px 4px #bbbbbb
+    
+}
+#livescore_title{
+    text-align: center
+}
+#livescore_content{
+    width: fill-available;
+}
+#cricinfo_title{
+    padding-left:150px;
+}
+#sports_cricinfo{
+    font-family:'Myriad Pro';
+    padding-top: 10px;
+    width: 33%;
+    float: left
+}
+#cricinfo_content{  
+    float: left
+}
+#business_sec {
+    float: left;
+    margin-left:0px;
+    padding-top:50px;
+    font-family: 'Myriad Pro';
+    background-color: #fbfbfb;
+    width: 90% ;
+    margin-left: 80px;
+}
+#business_sec #title{
+    padding-left: 30px;
+    margin-bottom: 30px;
+    border-bottom-style: solid;
+    border-bottom-color: #bbbbbb;
+    border-bottom-width: thin;
+   
+}
+#ndtv{
+    float: left;
+    margin-top: 30px;
+    width: 33%;
+    
+}
+#ndtv_title{
+    padding-left:230px;
+}
+#business_standard{
+    float: left;
+     margin-top: 30px;
+     width: 33%;
+}
+#business_standard_title{
+    padding-left: 170px;
+}
+
+#tech_sec {
+    float: left;
+    margin-top:100px;
+    font-family: 'Myriad Pro';
+    background-color: #fbfbfb;
+    width: 90% ;
+    margin-left: 80px;
+}
+#tech_sec #title{
+    padding-left: 30px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    border-bottom-style: solid;
+    border-bottom-color: #bbbbbb;
+    border-bottom-width: thin;
+   
+}
+#techcrunch{
+    float: left;
+    margin-top: 30px;
+    width: 33%;
+}
+#techcrunch_title{
+    padding-left:160px;
+}
+#theverge{
+    float: left;
+     margin-top: 30px;
+     width: 33%;
+}
+#theverge_title{
+    padding-left: 180px;
+}
+#ign{
+    float: left;
+     margin-top: 30px;
+     width: 33%;
+}
+#ign_title{
+    padding-left: 180px;
+}
+#innerfeed{    
+    padding-left: 0px;
+    text-decoration-color: #000;
+    list-style-type: none;
+    background-color: #fff;
+    box-shadow: 1px 2px 5px #bbbbbb;
+     
+}
+ul li:hover{
+    background-color: #808080; 
+    
+}
+#zzzz:hover{
+    background-color: #f9f9f7
+}
+#zzzz {
+    border-bottom-style: solid;
+    border-bottom-width: thin;    
+    border-bottom-color: #F0EEE9;   
+    padding: 5px;
+    color: #535353;
+    padding-top: 15px;
+}

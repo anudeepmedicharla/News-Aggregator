@@ -1,0 +1,65 @@
+#main{
+   
+}
+#feedcontent{
+    
+   
+    height: auto;
+    width: fill-available;
+    margin: 1px;
+    
+}
+#title{
+    font-family:'Helvetica Neue light';
+    font-size: xx-large;
+    text-align: left;    
+    text-align: center;
+    height: 40px;
+    padding:  10px;
+    
+}
+
+#entertainment,#sports,#politics,#tech,#national{
+    font-family: 'Myriad Pro';
+    width: 700px;
+    margin-left: 10%;
+    
+}
+#innerfeed{
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration-color: #000;
+    list-style-type: none;
+     
+}
+
+#zzzz {
+    border-style: solid;
+    border-width: thin;
+    padding: 5px;
+}
+
+ul li a{   
+    color: #0094ff;
+    text-decoration-style: none;
+}
+#navigator{
+    position:fixed;
+    top: 200px;
+    left: 0px;
+    background-color: #d29c08;
+    height:100%;
+    margin-top: -200px;
+    
+}
+#navigator ul {
+    list-style-type: none;
+    padding-top: 50%;
+}
+#navigator ul li{
+   margin-bottom: 30px;
+}
+#navigator ul li a{
+    text-decoration-style: none;
+    color: #fff;
+}

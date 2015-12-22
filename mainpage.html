@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>News Aggregator</title>
+         
+        <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+
+        function feedload(feedurl,divid) {
+
+            var feedcontainer = document.getElementById("feeddiv")
+            var feedlimit = 15
+            var rssoutput = "<ul>"
+
+            function rssfeedsetup() {
+                var feedpointer = new google.feeds.Feed(feedurl) //Google Feed API method
+                feedpointer.setNumEntries(feedlimit) //Google Feed API method
+                feedpointer.load(displayfeed) //Google Feed API method
+
+            }
+
+            function displayfeed(result) {
+                if (!result.error) {
+                    var thefeeds = result.feed.entries
+
+                    for (var i = 0; i < thefeeds.length; i++)
+                        rssoutput += "<div id='innerfeed'><li><a href='" + thefeeds[i].link + "' style='text-decoration:none' target='_blank'><div id='zzzz'>" + thefeeds[i].title + "</div></a></li> </div>"
+
+                        rssoutput+="</ul>"
+                    document.getElementById(divid).innerHTML = rssoutput
+
+                }
+                else
+                    alert("Error fetching feeds!")
+            }
+            rssfeedsetup()
+        }
+</script>
+    </head>
+    <body>
+        <header>
+        <div id="navigation">
+        <ul>
+        <li>
+        <a href="#topstories_sec">Top stories</a>
+        </li>
+        <li>
+        <a href="#tech_sec">Tech</a>
+        </li>
+        <li>
+        <a href="#politics_sec">Politics</a>
+        </li>
+        <li>
+        <a href="#sports_sec">Sports</a>
+        </li>
+        <li>
+        <a href="#entertainment_sec">Entertainment</a>
+        </li>
+        <li>
+        <a href="#business_sec">Business</a>
+        </li>
+        </ul>
+        </div>
+            </header>
+        <div id="topstories_sec">
+            <div id="title">
+            Top Stories     
+            </div>
+            <div id="sources">
+            <span id="top_hindu">
+            THE HINDU 
+            </span>
+            <span id="top_msn">
+            MSN
+            </span>
+            <span id="top_bbc">
+            BBC
+            </span>
+                </div>
+            
+                <div id="topstories">                           
+                <div id="topstories_hindu">
+                <script>
+                    feedload("http://www.hindu.com/rss/01hdline.xml","topstories_hindu")
+                </script>                
+                </div>
+                       
+                <div id="topstories_msn">
+                    <script>
+                        feedload("http://news.in.msn.com/rss/news_topstories.aspx","topstories_msn")
+                    </script>
+                </div>
+                    <div id="topstories_bbc">
+                    <script>
+                        feedload("http://feeds.bbci.co.uk/news/world/asia/rss.xml","topstories_bbc")
+                    </script>
+                    </div>
+                    </div>
+        
+        </div>
+        <div id="tech_sec">
+            <div id="title">
+            TECH
+            </div>
+        <div id="tech_content">
+            <div id="techcrunch">
+                <span id="techcrunch_title">
+                Ars Technica
+                </span>  
+                <div id="techcrunch_content">          
+            <script>
+                feedload("http://feeds.arstechnica.com/arstechnica/index?format=xml","techcrunch_content")
+            </script>
+            </div>
+            </div>
+            <div id="theverge">
+                <span id="theverge_title">
+                THE VERGE
+                </span>
+                <div id="theverge_content">
+            <script>
+                feedload("http://www.theverge.com/rss/index.xml","theverge_content")
+            </script>
+            </div>
+            </div>
+             <div id="ign">
+                <span id="ign_title">
+                IGN
+                </span>
+                <div id="ign_content">
+            <script>
+                feedload("http://feeds.ign.com/ign/tech-all","ign_content")
+            </script>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div id="entertainment_sec">
+            <div id="title">
+            Entertainment
+        </div>
+        <div id="entertainment_content">
+            <div id="bollywood">
+                <span id="bollywood_title">
+                BOLLYWOOD
+                </span>
+                <div id="bollywood_content">
+            <script>
+                feedload("http://entertainment.in.msn.com/rss/bollywood.aspx","bollywood_content")
+            </script>
+                    </div>
+                </div>
+            <div id="south">
+            <span id="south_title">
+            SOUTH
+            </span>
+                <div id="south_content">
+                <script>
+                    feedload("http://entertainment.in.msn.com/rss/southcinema.aspx","south_content")
+                </script></div>
+            </div>
+            <div id="hollywood">
+            <span id="hollywood_title">
+                HOLLYWOOD
+            </span>
+                <div id="hollywood_content">
+                <script>
+                    feedload("http://feeds.reuters.com/reuters/INentertainmentNews?format=xml","hollywood_content")
+                </script></div>
+            </div>
+            </div>           
+        </div>
+        <div id="politics_sec">
+            <div id="title">
+                Politics
+        </div>
+            <div id="politics_content">
+                <div id="national">
+                <span id="national_title">
+                NATIONAL
+                </span>
+                    <div id="national_content">
+                        <script>
+                feedload("http://www.hindu.com/rss/01hdline.xml","national_content")
+              </script>
+                </div>
+                </div>  
+                <div id="regional">
+                <span id="regional_title">
+                REGIONAL
+                </span>
+                    <div id="regional_content">
+                    <script>
+                        feedload("http://www.hindu.com/rss/21hdline.xml","regional_content")
+                    </script></div>
+                </div>      
+                <div id="international">
+                <span id="international_title">
+                INTERNATIONAL</span>
+                <div id="international_content">
+                <script>
+                    feedload("http://feeds.reuters.com/Reuters/PoliticsNews?format=xml","international_content")
+                </script>
+                </div>
+                </div>    
+                </div>  
+            </div>
+        <div id="sports_sec">
+            <div id="title">
+                Sports  
+            </div>
+             <div id="sports">
+            <div id="sports_content">
+                <div id="sports_hindu">
+                    <span id="hindu_title">
+                    INDIAN EXPRESS
+                    </span>
+                    <div id="sports_hindu_content">
+                    
+            <script>
+                feedload("http://syndication.indianexpress.com/rss/785/latest-news.xml","sports_hindu_content")
+            </script> 
+                        </div>
+                </div>
+                <div id="livescore">
+                    <span id="livescore_title">
+                    LIVE SCORE
+                    </span>
+                    <div id="livescore_content">
+                <script>
+                    feedload("http://static.cricinfo.com/rss/livescores.xml","livescore_content")
+                </script>
+                        </div>
+                </div>
+                <div id="sports_cricinfo">
+                    <span id="cricinfo_title">
+                    CRICINFO
+                        </span>
+                    <div id="cricinfo_content">                        
+                    <script>
+                        feedload("http://www.espncricinfo.com/rss/content/story/feeds/6.xml","cricinfo_content")
+                    </script>
+                    </div>
+                </div>
+                </div>           
+        </div>
+            </div>
+        <div id="business_sec">
+            <div id="title">
+            BUSINESS
+            </div>
+        <div id="business_content">
+            <div id="ndtv">
+                <span id="ndtv_title">
+                NDTV
+                </span>  
+                <div id="ndtv_content">          
+            <script>
+                feedload("http://feeds.feedburner.com/NDTV-Business?format=xml","ndtv_content")
+            </script>
+            </div>
+            </div>
+            <div id="business_standard">
+                <span id="business_standard_title">
+                BUSINESS STANDARD
+                </span>
+                <div id="business_standard_content">
+            <script>
+                feedload("http://www.business-standard.com/rss/latest.rss","business_standard_content")
+            </script>
+            </div>
+            </div>
+        </div>
+        </div>
+           
+    </body>
+</html>
